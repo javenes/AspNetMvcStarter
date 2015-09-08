@@ -1,0 +1,35 @@
+﻿@model MovieDAL.Movie
+@{
+    ViewBag.Title = Model.Title;
+}
+
+<h2>@Model.Title (@Model.ProductionYear)</h2>
+<p>@Model.Description</p>
+
+<strong>Skuespillere</strong>
+<ul>
+    @foreach (var person in Model.Actors)
+    {
+        <li>
+            @Html.ActionLink(@person.Name, "Details", "Person", new { id = @person.PersonId }, null)
+        </li>
+     
+    }
+</ul>
+
+<strong>Produsenter</strong>
+<ul>
+    @foreach (var person in Model.Producers)
+    {
+        <li>@person.Name</li>
+    }
+</ul>
+
+<strong>Regisør</strong>
+<ul>
+    @foreach (var person in Model.Directors)
+    {
+        <li>@person.Name</li>
+    }
+</ul>
+
