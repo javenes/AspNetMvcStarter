@@ -6,6 +6,10 @@
 <h2>@Model.Title (@Model.ProductionYear)</h2>
 <p>@Model.Description</p>
 
+<p>
+    <img src="@Url.Action("CreateImage", "Image", new { format = "thumb", id = Model.MovieId}) "/>
+</p>
+
 <strong>Skuespillere</strong>
 <ul>
     @foreach (var person in Model.Actors)
