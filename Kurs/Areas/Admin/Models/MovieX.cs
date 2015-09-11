@@ -34,6 +34,7 @@ namespace Kurs.Areas.Admin.Models
 
     }
 
+
     public class MovieValidatorClass
     {
         public static ValidationResult NewMovie(string movieId)
